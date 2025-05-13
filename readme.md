@@ -10,7 +10,7 @@ La libreria cuenta con una documentación detallada de como es que se pueda usar
 Aqui se puede ver un pequeño ejemplo de uso utilizando un modelo de Gemini:
 
 ```go
-    package main
+package main
 
 import (
 	"fmt"
@@ -45,7 +45,7 @@ The library has detailed documentation on how to use the models it offers, inclu
 Here you can see a small example of use using a Gemini model:
 
 ```go
-    package main
+package main
 
 import (
 	"fmt"
