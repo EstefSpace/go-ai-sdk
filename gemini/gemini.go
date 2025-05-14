@@ -6,21 +6,11 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"strings"
 )
 
-type ClientGemini struct {
-	apiKey string
-	model  string
-}
+func Ask(prompt string, instructions string, apiKey string, model string) (string, error) {
 
-func (c *ClientGemini) Ask(prompt string, instructions string) (string, error) {
-
-	if !(strings.Contains(c.model, "gemini-2.5-pro-exp-03-25") || strings.Contains(c.model, "gemini-2.0-flash") || strings.Contains(c.model, "gemini-2.5-flash-preview-04-17")) {
-		return "", fmt.Errorf("checa que hayas elegido un modelo valido (documentacion en: https://goaisdk.info/docs/gemini): %s", c.model)
-	}
-
-	url := "https://generativelanguage.googleapis.com/v1beta/models/" + c.model + ":generateContent?key=" + c.apiKey
+	url := "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent?key=" + apiKey
 
 	payload := map[string]interface{}{
 		"system_instruction": map[string]interface{}{
