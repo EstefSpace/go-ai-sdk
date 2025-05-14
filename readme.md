@@ -14,7 +14,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/estefspace/go-ai-sdk"
+	"github.com/estefspace/go-ai-sdk/gemini"
 )
 
 func main() {
@@ -49,7 +49,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/estefspace/go-ai-sdk"
+	"github.com/estefspace/go-ai-sdk/gemini"
 )
 
 func main() {
