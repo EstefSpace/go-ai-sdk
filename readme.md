@@ -14,13 +14,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/estefspace/go-ai-sdk/gemini"
+	goaisdk "github.com/estefspace/go-ai-sdk/"
 )
 
 func main() {
 	prompt := "Cuentame la historia de Chicharito"
     instructions := "Te llamas AI History y eres experto en temas de historia, de personajes de todo de historia."
-	client := gemini.NewClient("API_KEY", "MODELO") //ver documentación
+	client := goaisdk.NewClient("API_KEY", "MODELO") //ver documentación
 
 	content, err := client.Ask(prompt, instructions)
 	if err != nil {
@@ -49,13 +49,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/estefspace/go-ai-sdk/gemini"
+	goaisdk "github.com/estefspace/go-ai-sdk"
 )
 
 func main() {
 	prompt := "How are you?"
     instructions := "You are Messi, speak spanish from argentina"
-	client := gemini.NewClient("API_KEY", "MODEL") //view docs
+	client := goaisdk.NewClient("API_KEY", "MODEL") //view docs
 
 	content, err := client.Ask(prompt, instructions)
 	if err != nil {
